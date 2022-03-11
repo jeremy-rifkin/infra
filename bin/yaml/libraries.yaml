@@ -98,6 +98,18 @@ libraries:
         - all
       targets:
         - release-1.10.0
+    openblas:
+      type: github
+      repo: xianyi/OpenBLAS
+      subdir: openblas
+      target_prefix: v
+      targets:
+        - 0.3.20
+      make_targets:
+        - all
+      extra_cmake_arg:
+        - -DDYNAMIC_ARCH=TRUE
+      build_type: cmake
     catch2v2:
       type: github
       repo: catchorg/Catch2
